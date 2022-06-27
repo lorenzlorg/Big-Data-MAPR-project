@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="age <= 44.5\ngini = 0.5\nsamples = 888\nvalue = [444, 444]\nclass = No Risk heart disease", fillcolor="#ffffff"] ;
+1 [label="heartRate <= 84.5\ngini = 0.457\nsamples = 184\nvalue = [119, 65]\nclass = No Risk heart disease", fillcolor="#f3c6a5"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="glucose <= 89.0\ngini = 0.491\nsamples = 120\nvalue = [68, 52]\nclass = No Risk heart disease", fillcolor="#f9e1d0"] ;
+1 -> 2 ;
+3 [label="gini = 0.5\nsamples = 92\nvalue = [47, 45]\nclass = No Risk heart disease", fillcolor="#fefaf7"] ;
+2 -> 3 ;
+4 [label="gini = 0.375\nsamples = 28\nvalue = [21, 7]\nclass = No Risk heart disease", fillcolor="#eeab7b"] ;
+2 -> 4 ;
+5 [label="diaBP <= 63.25\ngini = 0.324\nsamples = 64\nvalue = [51, 13]\nclass = No Risk heart disease", fillcolor="#eca16b"] ;
+1 -> 5 ;
+6 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2]\nclass = Potential Risk heart disease", fillcolor="#399de5"] ;
+5 -> 6 ;
+7 [label="gini = 0.292\nsamples = 62\nvalue = [51, 11]\nclass = No Risk heart disease", fillcolor="#eb9c64"] ;
+5 -> 7 ;
+8 [label="male_1 <= 0.5\ngini = 0.497\nsamples = 704\nvalue = [325, 379]\nclass = Potential Risk heart disease", fillcolor="#e3f1fb"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="education_1.0 <= 0.5\ngini = 0.498\nsamples = 368\nvalue = [196, 172]\nclass = No Risk heart disease", fillcolor="#fcf0e7"] ;
+8 -> 9 ;
+10 [label="gini = 0.475\nsamples = 186\nvalue = [114, 72]\nclass = No Risk heart disease", fillcolor="#f5d1b6"] ;
+9 -> 10 ;
+11 [label="gini = 0.495\nsamples = 182\nvalue = [82, 100]\nclass = Potential Risk heart disease", fillcolor="#dbedfa"] ;
+9 -> 11 ;
+12 [label="totChol <= 190.5\ngini = 0.473\nsamples = 336\nvalue = [129, 207]\nclass = Potential Risk heart disease", fillcolor="#b4daf5"] ;
+8 -> 12 ;
+13 [label="gini = 0.482\nsamples = 42\nvalue = [25, 17]\nclass = No Risk heart disease", fillcolor="#f7d7c0"] ;
+12 -> 13 ;
+14 [label="gini = 0.457\nsamples = 294\nvalue = [104, 190]\nclass = Potential Risk heart disease", fillcolor="#a5d3f3"] ;
+12 -> 14 ;
+}
